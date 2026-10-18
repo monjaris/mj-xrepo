@@ -3,6 +3,8 @@ package("clixx")
     set_homepage("https://github.com/monjaris/clixx")
     add_urls("https://github.com/monjaris/clixx.git")
 
+    add_includedirs("include")
+
 
     on_install(function (package)
         local xmake = import("package.tools.xmake")
