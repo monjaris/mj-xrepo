@@ -9,6 +9,7 @@ package("clixx")
     on_install(function (package)
         local xmake = import("package.tools.xmake")
         xmake.install(package)
+        os.cp("include/clixx", package:installdir("include"))
     end)
 
 
