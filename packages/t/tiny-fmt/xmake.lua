@@ -4,6 +4,8 @@ package("tiny-fmt")
     add_urls("https://github.com/monjaris/tiny-fmt.git")
     set_license("MIT")
 
+    add_includedirs("include")
+
     on_install(function (package)
         import("package.tools.xmake").install(package)
         os.cp("include/tinyfmt", package:installdir("include"))
