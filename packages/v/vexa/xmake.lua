@@ -4,6 +4,8 @@ package("vexa")
     add_urls("https://github.com/monjaris/vexa.git")
     set_license("MIT")
 
+    add_links("vexa", "tiny-fmt")
+
     on_install(function (package)
         import("package.tools.xmake").install(package)
     end)
