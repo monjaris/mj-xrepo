@@ -5,10 +5,10 @@ package("dotline")
 
     add_urls("https://github.com/monjaris/dotline.git")
 
-    add_includedirs("include/")
-
     on_install(function (package)
         import("package.tools.xmake").install(package)
+
+        os.cp("include/", package:installdir("include"))
     end)
 
     on_test(function (package)
